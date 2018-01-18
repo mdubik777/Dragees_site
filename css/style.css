@@ -1,0 +1,910 @@
+/*** Reset CSS Load ***/
+html { height:100%; width:100%; }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1.3;
+    font-family: 'robotomedium', sans-serif;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table { border-collapse: collapse; border-spacing: 0; table-layout: fixed;}
+
+ol,ul {list-style: none;}
+a {outline: 0;outline: none; color: #3b3b3b; text-decoration: none;}
+a:hover {text-decoration: none; cursor: pointer;}
+
+
+@font-face {
+    font-family: 'robotobold';
+    src: url('../fonts/roboto-bold-webfont.woff2') format('woff2'),
+    url('../fonts/roboto-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotolight';
+    src: url('../fonts/roboto-light-webfont.woff2') format('woff2'),
+    url('../fonts/roboto-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotomedium';
+    src: url('../fonts/roboto-medium-webfont.woff2') format('woff2'),
+    url('../fonts/roboto-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotoregular';
+    src: url('../fonts/roboto-regular-webfont.woff2') format('woff2'),
+    url('../fonts/roboto-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'webfontregular';
+    src: url('../fonts/ayuthaya-webfont.woff2') format('woff2'),
+    url('../fonts/ayuthaya-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*-----------------------------------------------
+                COMMON STYLES
+------------------------------------------------*/
+
+html {height: 100%;}
+body {color: #626262; background: #fff; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 20px; font-weight: normal; width: 100%; min-width: 1020px; height: 100%;}
+
+.f-left {float: left}
+.f-right {float: right}
+
+.clearfix:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/*-----------------------------------------------
+                MAin LAYOUT
+------------------------------------------------*/
+.wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    overflow: auto;
+    position: relative;
+    background: #f8f8f8;
+}
+
+.content:after {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 100%;
+    border-right: solid 1px #e8e8e8;
+    background: #f8f8f8;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.inner-box {
+    max-width: 1020px;
+    padding-left: 30px;
+    padding-right: 30px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    width: 1020px;
+    margin: 0 auto;
+}
+
+.col {
+    width: 50%;
+}
+
+.col:first-child {
+    background: #f8f8f8;
+}
+
+.product-details-wrapper {
+    position: fixed;
+    height: 100%;
+    min-height: 100%;
+}
+
+/*-----------------------------------------------
+                HEADER
+------------------------------------------------*/
+
+.header {
+    height: 56px;
+    border-bottom: solid 1px #e8e8e8;
+}
+
+.header:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 5px;
+    background: #66d4f8;
+}
+
+.header .inner-box {
+    padding-top: 14px;
+    padding-bottom: 12px;
+
+}
+
+.header .logo {
+    float: left;
+    margin-right: 77px;
+}
+.header .logo a {
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #000;
+    font-family: 'robotoregular', sans-serif;
+    font-weight: bold;
+}
+
+.header .logo a:hover {
+    text-decoration: none;
+}
+
+.header .menu-wrap {
+    float: left;
+    margin-right: 32px;
+}
+
+.header .menu-wrap .icon {
+    float: left;
+    margin-right: 16px;
+    cursor: pointer;
+    width: 20px;
+    height: 14px;
+}
+
+.header .menu-wrap .txt {
+    float: left;
+    color: #2d2d2d;
+    font-family: 'robotobold', sans-serif;
+    cursor: pointer;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: bold;
+}
+
+.header .basket-wrap {
+    float: right;
+    margin: 0 24px 0 42px;
+    cursor: pointer;
+}
+
+.header .basket-wrap .icon {
+    display: block;
+}
+
+.header .sign-wrap {
+    float: right;
+    cursor: pointer;
+}
+
+.header .sign-wrap .icon {
+    display: block;
+}
+
+/*-----------------------------------------------
+                CATALOG
+------------------------------------------------*/
+
+.catalog-wrapper {
+    max-width: 510px;
+    padding: 20px 30px 0 26px;
+    box-sizing: border-box;
+    background: white;
+}
+
+.catalog-wrapper .title {
+    display: block;
+    font-size: 19px;
+    color: #595959;
+    text-align: center;
+    margin: 0 0 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.catalog-wrapper .title-catalog {
+    display: block;
+    text-align: center;
+    font-family: 'robotobold', sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    color: #000000;
+}
+
+.filter-box .filter-btn {
+    position: relative;
+    color: #626262;
+    display: block;
+    width: 145px;
+    font-size: 12px;
+    border-bottom: solid 1px #f0f0f0;
+    float: left;
+    margin-right: 13px;
+    box-sizing: border-box;
+    padding: 0 10px 9px 2px;
+    font-family: 'webfontregular', sans-serif;
+    cursor: pointer;
+}
+
+.filter-box .filter-btn:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 0;
+    height: 0;
+    float: right;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 7px solid #999999;
+}
+
+
+.tile-view-icon {
+    float: right;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.tile-view-icon i {
+    display: block;
+    overflow: hidden;
+}
+
+.tile-view-icon i:first-child {
+    margin-bottom: 1px;
+}
+
+.tile-view-icon i:before {
+    content: '';
+    display: block;
+    float: left;
+    width: 2px;
+    height: 2px;
+    border: solid 1px #999999;
+    margin-right: 1px;
+}
+
+.tile-view-icon i:after {
+    content: '';
+    display: block;
+    float: left;
+    width: 2px;
+    height: 2px;
+    border: solid 1px #999999;
+}
+
+
+.line-view-icon {
+    float: right;
+    cursor: pointer;
+    width: 13px;
+    border-top: solid 2px #999999;
+    margin: 5px 0 0 8px;
+}
+
+.line-view-icon:before {
+    content: '';
+    display: block;
+    height: 2px;
+    background: #999999;
+    margin-top: 1px;
+}
+
+.line-view-icon:after {
+    content: '';
+    display: block;
+    height: 2px;
+    background: #999999;
+    margin-top: 1px;
+}
+
+
+/*-----------------------------------------------
+               LINE PRODUCT LIST
+------------------------------------------------*/
+
+.products-wrapper {
+    padding: 20px 0 0;
+}
+
+.line-product-box {
+    border: solid 1px #e8e8e8;
+    background: #f8f8f8;
+}
+
+.line-product-box:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.line-product-box:hover {
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 3px 18px 2px rgba(0,0,0, 0.3), inset 0 0 0 3px #a8c3d5;
+    border-color: #a8c3d5;
+}
+
+.line-product-box .pic-box {
+    float: left;
+    width: 130px;
+    height: 206px;
+}
+
+.line-product-box .pic-box .in {
+    display: table-cell;
+    vertical-align: middle;
+    height: 206px;
+    width: 130px;
+    text-align: center;
+}
+
+.line-product-box .info-box {
+    overflow: hidden;
+    padding: 20px 20px 0 0;
+}
+
+.line-product-box .info-box .name {
+    color: #383838;
+    display: block;
+    font-size: 14px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.line-product-box .info-box .txt {
+    color: #626262;
+    font-size: 14px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.info-box .description {
+    font-size: 12px;
+    line-height: 1.3;
+    display: block;
+    text-align: center;
+    margin-bottom: 9%;
+    font-family: 'robotolight', sans-serif;
+}
+
+.line-product-box .additional {
+    border-top: solid 1px #bababa;
+    padding: 12px 0 0 0;
+    overflow: hidden;
+}
+
+.line-product-box .additional li {
+    float: left;
+    position: relative;
+    line-height: 25px;
+    color: #383838;
+    font-size: 16px;
+    vertical-align: baseline;
+    font-family: 'robotolight', sans-serif;
+}
+
+.line-product-box .additional li span {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'robotobold', sans-serif;
+}
+
+.line-product-box .additional li span:first-of-type {
+    font-size: 22px;
+}
+
+.line-product-box .additional li:before {
+    content: '';
+    display: block;
+    height: 25px;
+    width: 1px;
+    background: #bababa;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.line-product-box .additional li:last-child:before{
+    display: none;
+}
+
+.line-product-box .additional .weight {
+    width: 88px;
+}
+
+.line-product-box .additional .price {
+    width: 99px;
+    text-align: center;
+}
+
+.line-product-box .additional li.control {
+    float: right;
+    text-align: right;
+}
+
+.line-product-box .additional .control .btn {
+    font-size: 19px;
+    color: #ff0000;
+    cursor: pointer;
+}
+
+/*-----------------------------------------------
+               TILE PRODUCT LIST
+------------------------------------------------*/
+
+.tile-product-box {
+    border: solid 1px #e8e8e8;
+    background: #f8f8f8;
+    width: 144px;
+    height: 208px;
+    box-sizing: border-box;
+    float: left;
+    padding: 10px 0 0;
+    margin: 0 11px 11px 0;
+}
+
+.tile-product-box:nth-child(3n) {
+    margin-right: 0;
+}
+
+.tile-product-box:hover {
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 3px 18px 2px rgba(0,0,0, 0.3), inset 0 0 0 3px #a8c3d5;
+    border-color: #a8c3d5;
+}
+
+.tile-product-box .pic-box {
+    display: table-cell;
+    height: 136px;
+    width: 144px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.tile-product-box .name {
+    display: block;
+    font-size: 14px;
+    color: #626262;
+    text-align: center;
+}
+
+.tile-product-box .name:after {
+    content: '';
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: #bababa;
+    margin: 5px auto 0;
+}
+
+.tile-product-box .price {
+    display: block;
+    font-size: 14px;
+    color: #000;
+    text-align: center;
+    font-family: 'robotolight', sans-serif;
+}
+
+.tile-product-box .price span {
+    font-weight: bold;
+    font-family: 'robotobold', sans-serif;
+}
+
+.tile-product-box.with-sale {
+    position: relative;
+}
+
+.tile-product-box.with-sale .price,
+.tile-product-box.with-sale .name {
+    color: #f82842;
+}
+
+.tile-product-box .sale-box {
+    display: block;
+    width: 35px;
+    height: 35px;
+    background: #ff0000;
+    color: #fff;
+    font-size: 22px;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 100%;
+    font-family: 'robotomedium', sans-serif;
+    position: absolute;
+    top: -14px;
+    right: -12px;
+    z-index: 10;
+}
+
+/*-----------------------------------------------
+                PRODUCT DETAILS
+------------------------------------------------*/
+
+.product-details-box {
+    width: 510px;
+    padding: 0 30px 0 40px;
+    box-sizing: border-box;
+    min-height: 100%;
+}
+
+.product-details-box .head-box {
+    padding: 20px 0 0;
+    overflow: hidden;
+}
+
+.product-details-box .head-box .btn {
+    font-size: 9px;
+    line-height: 10px;
+    color: #6f6f6f;
+    margin: 5px 0 0;
+    font-family: 'robotolight', sans-serif;
+    cursor: pointer;
+}
+
+.product-details-box .head-box .btn .icon {
+    display: inline-block;
+    width: 16px;
+    height: 10px;
+    vertical-align: top;
+}
+
+.product-details-box .head-box .btn .txt {
+    margin: 0 7px;
+}
+
+.product-details-box .head-box .btn.prev{
+    float: left;
+}
+
+.product-details-box .head-box .btn.next{
+    float: right;
+}
+
+.product-details-box .head-box .title {
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    line-height: 20px;
+    color: #6f6f6f;
+    font-family: 'robotolight', sans-serif;
+}
+
+.product-details-box .pic-box {
+    height: 400px;
+    background: url(../images/map-background.png) center center no-repeat;
+}
+
+.product-details-box .pic-box .in {
+    height: 400px;
+    width: 460px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    position: relative;
+}
+
+.pic-box .in .tastes {
+    position: absolute;
+    text-align: left;
+    max-width: 100px;
+}
+
+.tastes .taste-icon {
+    height: auto;
+    vertical-align: middle;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.tastes p {
+    overflow: hidden;
+    margin-bottom: 8px;
+    display: flex;
+}
+
+.tastes span {
+    font-style: italic;
+    line-height: 1;
+    display: table-cell;
+}
+
+.pic-box .exclamation {
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 15px;
+    background: #474747;
+    bottom: 65px;
+}
+
+.product-details-box .control button {
+    display: block;
+    width: 164px;
+    margin: 0 auto;
+    background: #ff0000;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    text-align: center;
+    font-size: 16px;
+    padding: 12px;
+    box-shadow: 0 5px 20px #aba4a4;
+    cursor: pointer;
+    font-family: 'robotomedium', sans-serif;
+}
+
+.product-details-box .price-box {
+    color: #000000;
+    font-weight: bold;
+    font-family:  'robotobold', sans-serif;
+    margin-bottom: 8%;
+
+}
+
+.product-details-box .price-box span {
+    font-size: 26px;
+    line-height: 1;
+}
+
+.product-details-box .price-box span:first-of-type {
+    font-size: 50px;
+    margin-right: 17px;
+}
+
+.product-details-box .price-info {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.price-info .info-item {
+    display: inline-block;
+    margin: 0 23px;
+}
+
+.weight-box .weight-icon {
+    width: 15px;
+    height: 12px;
+    display: inline-block;
+}
+
+.weight-box .weight-icon.single {
+    background: url('../images/weight1.png') no-repeat;
+}
+
+.weight-box .weight-icon.twice {
+    background: url('../images/weight.png') no-repeat;
+}
+
+.weight-box .line {
+    display: inline-block;
+    width: 44px;
+    height:1px;
+    background: #e2e2e2;
+    margin: 0 5px;
+}
+
+.quantity-box {
+    margin: 15px;
+}
+
+.quantity-box span {
+    color: #626262;
+    font-size: 24px;
+    line-height: 24px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.quantity-box .sign {
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    border: 1px solid #dedede;
+    box-shadow: 0 0 18px 2px rgba(0,0,0, 0.1);
+    position: relative;
+    cursor: pointer;
+}
+
+.quantity-box .sign:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 13px;
+    height: 1px;
+    background: #dedede;
+    top: 12px;
+    left: 6px;
+}
+
+.quantity-box .plus:after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 13px;
+    width: 1px;
+    background: #dedede;
+    top: 6px;
+    left: 12px;
+}
+
+/*-----------------------------------------------
+                RADIO BUTTONS
+------------------------------------------------*/
+
+.custom-radio {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.custom-radio span {
+    display: inline-block;
+    vertical-align: bottom;
+    line-height: 1;
+}
+
+.custom-radio input[type="radio"] {
+    display: none;
+}
+
+.custom-radio input[type="radio"] + label {
+    color: #adadad;
+    font-size: 12px;
+    line-height: 1;
+    font-weight: bold;
+    display: block;
+}
+
+.custom-radio input[type="radio"] + label i {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: -1px 7px 0 0;
+    vertical-align: middle;
+    background: #dddddd;
+    cursor: pointer;
+    border-radius: 50%;
+
+}
+
+.custom-radio input[type="radio"] + label i:before {
+    content: '';
+    display: none;
+    width: 9px;
+    height: 9px;
+    border-radius: 100%;
+    background: #66d4f8;
+    margin: 3px auto 0;
+}
+
+.custom-radio input[type="radio"]:checked + label i:before {
+    display: block;
+}
+
+/*-----------------------------------------------
+                FOOTER
+------------------------------------------------*/
+
+.footer {
+    height: 55px;
+    margin-top: -55px;
+    border-top: solid 1px #e8e8e8;
+    font-size: 10px;
+    color: #626262;
+    position: relative;
+    z-index: 2;
+    background: #ffffff;
+}
+
+.footer .inner-box {
+    padding-top: 19px;
+    overflow: hidden;
+}
+
+.footer .soc-list {
+    float: left;
+    margin-right: 20px;
+}
+
+.footer .soc-list li {
+    float: left;
+    margin-right: 3px;
+}
+
+.footer .soc-list li:last-child {
+    margin-right: 0;
+}
+
+.footer .soc-list li a {
+    display: block;
+    width: 17px;
+    height: 17px;
+    text-decoration: none;
+}
+
+.footer .soc-list li a:hover {
+    text-decoration: none;
+}
+
+.footer .txt {
+    float: left;
+}
+
+.footer .copyright {
+    float: right;
+}
